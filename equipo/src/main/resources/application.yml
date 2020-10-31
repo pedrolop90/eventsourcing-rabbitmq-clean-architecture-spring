@@ -1,0 +1,10 @@
+server:
+  port: 9010
+
+spring:
+  rabbitmq:
+    host: localhost
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
