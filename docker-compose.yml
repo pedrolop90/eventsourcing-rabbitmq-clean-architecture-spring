@@ -1,0 +1,26 @@
+version: "3.3"
+services:
+  jugador:
+    container_name: jugador
+    build:
+      context: jugador/.
+    ports:
+      - "9000:9000"
+    networks:
+      - app-tier
+  equipo:
+    container_name: equipo
+    build:
+      context: equipo/.
+    ports:
+      - "9010:9010"
+    networks:
+      - app-tier
+  rabbitmq:
+    image: 'bitnami/rabbitmq:latest'
+    networks:
+      - app-tier
+
+networks:
+  app-tier:
+    driver: bridge
