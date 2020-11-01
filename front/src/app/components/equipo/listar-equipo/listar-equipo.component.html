@@ -1,0 +1,16 @@
+<table>
+  <thead>
+  <tr>
+    <th>id</th>
+    <th>nombre</th>
+    <th>numero jugadores</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let equipo of listaEquipo; index as i" style="border: black 2px solid">
+    <td>{{equipo.id}}</td>
+    <td>{{equipo.nombre}}</td>
+    <td>{{equipo.cantidadJugadores}}</td>
+  </tr>
+  </tbody>
+</table>

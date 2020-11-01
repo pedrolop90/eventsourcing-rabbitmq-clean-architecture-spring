@@ -8,11 +8,12 @@
         <module>jugador</module>
         <module>equipo</module>
         <module>commons</module>
+        <module>equipoquery</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.5.RELEASE</version>
+        <version>2.3.4.RELEASE</version>
         <relativePath/>
     </parent>
 

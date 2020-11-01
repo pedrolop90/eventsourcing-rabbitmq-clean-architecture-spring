@@ -7,6 +7,8 @@ import com.test.springboot.rabbitmq.dominio.domain.equipo.Equipo;
  */
 public interface EquipoProducer {
 
+    void agregadoEquipo(Equipo equipo);
+
     void actualizaDataEquipo(Equipo equipo);
 
 }

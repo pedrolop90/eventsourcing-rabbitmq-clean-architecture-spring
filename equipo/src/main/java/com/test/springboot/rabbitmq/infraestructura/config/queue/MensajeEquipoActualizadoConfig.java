@@ -19,19 +19,14 @@ public class MensajeEquipoActualizadoConfig {
     public final static String ROUTING_KEY_EQUIPO = "equipo_actualizado";
 
     @Bean
-    public Queue queue() {
+    public Queue queueEquipoActualizado() {
         return new Queue(MensajeEquipoActualizadoConfig.COLA_EQUIPO_ACTUALIZADO, false);
     }
 
     @Bean
-    public FanoutExchange exchangeEquipo() {
-        return new FanoutExchange(MensajeEquipoActualizadoConfig.EXCHANGE_EQUIPO, false, true);
-    }
-
-    @Bean
-    public Binding bindingEquipoActualizado(Queue queue, FanoutExchange exchangeEquipo) {
+    public Binding bindingEquipoActualizado(Queue queueEquipoActualizado, FanoutExchange exchangeEquipo) {
         return BindingBuilder
-                .bind(queue)
+                .bind(queueEquipoActualizado)
                 .to(exchangeEquipo);
     }
 

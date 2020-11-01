@@ -1,0 +1,13 @@
+server:
+  port: 9020
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
